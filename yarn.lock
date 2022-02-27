@@ -2408,34 +2408,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"block-twitter-login-wall@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "block-twitter-login-wall@workspace:."
-  dependencies:
-    "@babel/cli": ^7.17.6
-    "@babel/core": ^7.17.5
-    "@babel/preset-env": ^7.16.11
-    "@babel/preset-typescript": ^7.16.7
-    "@babel/runtime": ^7.17.2
-    "@typescript-eslint/eslint-plugin": ^5.12.1
-    "@typescript-eslint/parser": ^5.12.1
-    babel-loader: ^8.2.3
-    copy-webpack-plugin: ^10.2.4
-    eslint: ^8.9.0
-    eslint-config-prettier: ^8.4.0
-    eslint-webpack-plugin: ^3.1.1
-    fork-ts-checker-webpack-plugin: ^7.2.1
-    husky: ^7.0.4
-    lint-staged: ^12.3.4
-    pinst: ^3.0.0
-    prettier: 2.5.1
-    typescript: ^4.5.5
-    web-ext: ^6.7.0
-    webpack: ^5.69.1
-    webpack-cli: ^4.9.2
-  languageName: unknown
-  linkType: soft
-
 "bluebird@npm:~2.9.24":
   version: 2.9.34
   resolution: "bluebird@npm:2.9.34"
@@ -2543,6 +2515,34 @@ __metadata:
   checksum: a479e0787c3a0b6565b54bd15f0b6c729d624c5aba53523e140e49e279b7a78508df93000e758bf6d02361117d6b4e6e5fc1d5ece05366fb6c4ba41bf1ac7d52
   languageName: node
   linkType: hard
+
+"bypass-twitter-login-wall@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "bypass-twitter-login-wall@workspace:."
+  dependencies:
+    "@babel/cli": ^7.17.6
+    "@babel/core": ^7.17.5
+    "@babel/preset-env": ^7.16.11
+    "@babel/preset-typescript": ^7.16.7
+    "@babel/runtime": ^7.17.2
+    "@typescript-eslint/eslint-plugin": ^5.12.1
+    "@typescript-eslint/parser": ^5.12.1
+    babel-loader: ^8.2.3
+    copy-webpack-plugin: ^10.2.4
+    eslint: ^8.9.0
+    eslint-config-prettier: ^8.4.0
+    eslint-webpack-plugin: ^3.1.1
+    fork-ts-checker-webpack-plugin: ^7.2.1
+    husky: ^7.0.4
+    lint-staged: ^12.3.4
+    pinst: ^3.0.0
+    prettier: 2.5.1
+    typescript: ^4.5.5
+    web-ext: ^6.7.0
+    webpack: ^5.69.1
+    webpack-cli: ^4.9.2
+  languageName: unknown
+  linkType: soft
 
 "cacache@npm:^15.2.0":
   version: 15.3.0
