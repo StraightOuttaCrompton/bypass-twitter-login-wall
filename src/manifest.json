@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Bypass twitter login wall 🦤",
+    "version": "1.0",
+
+    "description": "Stops the twitter login prompt from showing.",
+
+    "icons": {
+        "48": "icons/dodo-48.png",
+        "96": "icons/dodo-96.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.twitter.com/*"],
+            "js": ["index.js"]
+        }
+    ]
+}
