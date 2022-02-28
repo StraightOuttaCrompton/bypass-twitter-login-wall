@@ -33,7 +33,7 @@
         "postinstall": "husky install",
         "prepublishOnly": "pinst --disable",
         "postpublish": "pinst --enable",
-        "build": "NODE_ENV=production webpack && web-ext build -s dist",
+        "build": "NODE_ENV=production webpack && web-ext build -s dist && git archive --format zip -o web-ext-artifacts/source.zip HEAD",
         "start": "webpack --watch",
         "start:firefox": "web-ext run -t firefox-desktop --source-dir dist",
         "start:chrome": "web-ext run -t chromium --source-dir dist"
