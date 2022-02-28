@@ -1,0 +1,15 @@
+image: node:16.13.2 # change to match your node version
+
+build-job:
+  stage: build
+  script:
+    - yarn
+    - WEB_EXT_VERSION=$CI_COMMIT_TAG yarn build
+    - web-ext build -s dist
+    - git archive --format zip -o web-ext-artifacts/bypass_twitter_login_wall_source-$CI_COMMIT_TAG.zip HEAD
+  artifacts:
+    paths:
+      - web-ext-artifacts
+  rules:
+    - if: $CI_COMMIT_TAG
+
