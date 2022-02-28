@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Bypass twitter login wall",
-    "version": "1.0",
+    "version": "0.0.0",
     "description": "An extension to prevent the Twitter login wall from showing.",
     "icons": {
         "48": "assets/logo-48x48.png",

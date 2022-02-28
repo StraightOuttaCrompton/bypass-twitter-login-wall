@@ -4,6 +4,18 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
+const injectVersionIntoManifest = (buffer) => {
+    var manifest = JSON.parse(buffer.toString());
+
+    const { WEB_EXT_VERSION } = process.env;
+
+    if (WEB_EXT_VERSION) {
+        manifest.version = process.env.WEB_EXT_VERSION;
+    }
+
+    return JSON.stringify(manifest, null, 4);
+};
+
 const getBabelLoader = ({ browserslist, isProduction = false } = {}) => {
     return {
         loader: require.resolve('babel-loader'),
@@ -46,7 +58,13 @@ const getPlugins = ({ isProduction }) => {
 
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src', 'manifest.json'), to: path.resolve(__dirname, 'dist') },
+                {
+                    from: path.resolve(__dirname, 'src', 'manifest.json'),
+                    to: path.resolve(__dirname, 'dist'),
+                    transform(content) {
+                        return injectVersionIntoManifest(content);
+                    },
+                },
                 { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve(__dirname, 'dist', 'assets') },
             ],
         }),
